@@ -1,0 +1,19 @@
+# Screen configuration
+term screen
+escape ^]^]
+startup_message off
+vbell off
+defscrollback 2048
+compacthist on
+deflogin on
+hardstatus off
+termcapinfo xterm*|rxvt*|kterm*|Eterm* hs@
+defflow off
+bind f
+bind ^f
+shelltitle ' |zsh'
+caption always "%{rk}%H %{gk}%c %{yk}%M%d %{wk}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%?"
+sorendition =b g.
+activity "^GActivity in window %n %t"
+msgminwait 5
+msgwait 10
