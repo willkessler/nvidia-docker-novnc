@@ -124,6 +124,8 @@ RUN sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb
 RUN wget http://packages.osrfoundation.org/gazebo.key -O - | apt-key add -
 RUN apt-get update -y && apt-get install -y gazebo7
 
+# Add miniconda to root's PATH
+RUN echo "export PATH=/root/miniconda3:$PATH" >> /root/.bashrc
 
 # Create some useful default aliases
 RUN printf "%s\n" \
@@ -135,5 +137,3 @@ COPY start_desktop.sh /usr/local/bin/start_desktop.sh
 
 CMD /usr/local/bin/start_desktop.sh
 
-# Add miniconda to root's PATH
-RUN echo "export PATH=/root/miniconda3:$PATH" >> /root/.bashrc
