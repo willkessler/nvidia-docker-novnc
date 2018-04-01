@@ -17,7 +17,7 @@ expect connections on port 40001. Then surf to your host on that port.
 
 ### Setting up network access
 
-Thanks to Mattew Moore for these tips on configuring network access.
+Thanks to @moorage for these tips on configuring network access.
 
 https://github.com/willkessler/nvidia-docker-novnc/issues/2
 
