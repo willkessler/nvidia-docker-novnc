@@ -98,6 +98,23 @@ RUN echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > \
     apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116 && \
     apt-get update -y && \
     apt-get install -y ros-kinetic-desktop-full && \
+    apt-get install -y ros-kinetic-navigation && \
+    apt-get install -y ros-kinetic-roscpp && \
+    apt-get install -y ros-kinetic-joy && \
+    apt-get install -y ros-kinetic-kobuki-safety-controller && \
+    apt-get install -y ros-kinetic-yocs-velocity-smoother && \
+    apt-get install -y ros-kinetic-turtlebot-bringup && \
+    apt-get install -y ros-kinetic-geometry-msgs && \
+    apt-get install -y ros-kinetic-yocs-cmd-vel-mux && \
+    apt-get install -y ros-kinetic-diagnostic-aggregator && \
+    apt-get install -y ros-kinetic-depthimage-to-laserscan && \
+    apt-get install -y ros-kinetic-gazebo-ros && \
+    apt-get install -y ros-kinetic-kobuki-gazebo-plugins && \
+    apt-get install -y ros-kinetic-robot-pose-ekf && \
+    apt-get install -y ros-kinetic-robot-state-publisher && \
+    apt-get install -y ros-kinetic-turtlebot-description && \
+    apt-get install -y ros-kinetic-turtlebot-navigation && \
+    apt-get install -y ros-kinetic-xacro && \
     rosdep init && \
     rosdep update && \
     echo "source /opt/ros/kinetic/setup.bash" >> /root/.bashrc
@@ -117,3 +134,6 @@ RUN printf "%s\n" \
 COPY start_desktop.sh /usr/local/bin/start_desktop.sh
 
 CMD /usr/local/bin/start_desktop.sh
+
+# Add miniconda to root's PATH
+RUN echo "export PATH=/root/miniconda3:$PATH" >> /root/.bashrc
