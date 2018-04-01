@@ -1,3 +1,5 @@
+![Preview Image](https://cdn-images-1.medium.com/max/1600/1*wKNrdA3rqpHZU82DU4gVPA.gif)
+
 ### Building a GPU-enhanced Lubuntu Desktop with nvidia-docker2
 
 To build on a plain vanilla Google Compute GPU host:
@@ -7,8 +9,8 @@ To build on a plain vanilla Google Compute GPU host:
 1. Run `preinstall.sh`. This just runs `apt-get update` and puts in `screen` and `emacs` for getting started.
 1. Run `build.sh`. This will build everything needed to start up a nvidia-docker2 container with Ubuntu 16.04 and Lubuntu desktop.
 
-[SetupImage1](https://user-images.githubusercontent.com/176268/38177239-00283584-35b3-11e8-9c84-4f788120caca.png)
-[Setupimage2](https://user-images.githubusercontent.com/176268/38177244-0b6b4d3c-35b3-11e8-8605-ed184afa59a6.png)
+![SetupImage1](https://user-images.githubusercontent.com/176268/38177239-00283584-35b3-11e8-9c84-4f788120caca.png)
+![Setupimage2](https://user-images.githubusercontent.com/176268/38177244-0b6b4d3c-35b3-11e8-8605-ed184afa59a6.png)
 
 ### Running the container
 
